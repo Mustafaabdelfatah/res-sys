@@ -1,6 +1,24 @@
 import { createRouter, createWebHistory } from "vue-router";
 import Home from "../views/Home.vue";
 
+import Signup from "../views/Signup.vue";
+import Login from "../views/Login.vue";
+import Profile from "../views/Profile.vue";
+import AddNewLocation from "../components/Locations/AddNewLocation";
+import DeleteLocation from "../components/Locations/DeleteLocation";
+import UpdateLocation from "../components/Locations/UpdateLocation";
+import Menu from "../components/Menu/Menu.vue";
+import UpdateCategory from "../components/Menu/UpdateCategory.vue";
+import AddNewCategory from "../components/Menu/AddNewCategory.vue";
+import ViewCategories from "../components/Menu/ViewCategories.vue";
+import DeleteCategory from "../components/Menu/DeleteCategory.vue";
+import DeleteAllCategories from "../components/Menu/DeleteAllCategories.vue";
+import AddNewItem from "../components/Menu/AddNewItem.vue";
+import UpdateItem from "../components/Menu/UpdateItem.vue";
+import DeleteItem from "../components/Menu/DeleteItem.vue";
+import DeleteAllItems from "../components/Menu/DeleteAllItems.vue";
+import ErrorPage from "../views/ErrorPage.vue";
+
 const routes = [
   {
     path: "/",
@@ -16,6 +34,101 @@ const routes = [
     component: () =>
       import(/* webpackChunkName: "about" */ "../views/About.vue"),
   },
+
+  {
+    path: "/sign-up",
+    name: "Signup",
+    component: Signup,
+  },
+  
+  {
+    path: "/login",
+    name: "Login",
+    component: Login,
+  },  
+  {
+    path: "/profile",
+    name: "Profile",
+    component: Profile,
+  },
+  {
+    path: "/add-new-location",
+    name: "AddNewLocation",
+    component: AddNewLocation,
+  },
+  {
+    path: "/delete-location/:LocationId",
+    name: "DeleteLocation",
+    component: DeleteLocation,
+  },
+  {
+    path: "/update-location/:LocationId",
+    name: "UpdateLocation",
+    component: UpdateLocation,
+  },
+  {
+    path: "/menu/location/:locationId",
+    name: "Menu",
+    component: Menu,
+  },
+  {
+    path: "/menu/categories/add/:locationId",
+    name: "AddNewCategory",
+    component: AddNewCategory,
+  },
+  {
+    path: "/menu/item/update/:itemId/loc/:locationId",
+    name: "UpdateItem",
+    component: UpdateItem,
+  },
+  {
+    path: "/menu/item/:itemId/delete/loc/:locationId",
+    name: "DeleteItem",
+    component: DeleteItem,
+  },
+  {
+    path: "/menu/items/delete-all/:locationId",
+    name: "DeleteAllItems",
+    component: DeleteAllItems,
+  },
+  {
+    path: "/menu/items/add/:locationId",
+    name: "AddNewItem",
+    component: AddNewItem,
+  },
+  {
+    path: "/menu/categories/update/:locationId/:catId",
+    name: "UpdateCategory",
+    component: UpdateCategory,
+  },
+  {
+    path: "/menu/categories/delete/loc/:locationId/item/:catId",
+    name: "DeleteCategory",
+    component: DeleteCategory,
+  },
+  {
+    path: "/menu/categories/view/:locationId",
+    name: "ViewCategories",
+    component: ViewCategories,
+  },
+  {
+    path: "/menu/categories/view/:locationId",
+    name: "ViewCategories",
+    component: ViewCategories,
+  },
+  {
+    path: "/menu/categories/delete/all/:locationId",
+    name: "DeleteAllCategories",
+    component: DeleteAllCategories,
+  },
+ 
+  // stays last
+  {
+    path: "/:catchAll(.*)",
+    name: "ErrorPage",
+    component: ErrorPage,
+  } 
+
 ];
 
 const router = createRouter({

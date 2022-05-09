@@ -1,0 +1,101 @@
+{
+  "users": [
+    {
+      "name": "mustafa salama",
+      "email": "m@m.com",
+      "pass": "147852",
+      "id": 1
+    },
+    {
+      "name": "salama",
+      "email": "s@s.com",
+      "pass": "123456",
+      "id": 2
+    },
+    {
+      "name": "sabra",
+      "email": "s@s.com",
+      "pass": "111111",
+      "id": 3
+    },
+    {
+      "name": "sabra",
+      "email": "s@s.com",
+      "pass": "111111",
+      "id": 4
+    },
+    {
+      "name": "ali",
+      "email": "ali@a.com",
+      "pass": "123123123",
+      "id": 5
+    },
+    {
+      "name": "hamed",
+      "email": "h@h.com",
+      "pass": "132123123",
+      "id": 6
+    },
+    {
+      "name": "alolo",
+      "email": "m@m.com",
+      "pass": "123456",
+      "id": 7
+    },
+    {
+      "name": "ahmeed",
+      "email": "ah@a.com",
+      "pass": "456789",
+      "id": 8
+    }
+  ],
+  "locations": [
+    {
+      "name": "kmlkm",
+      "phone": "787",
+      "address": "dcddcw",
+      "userId": 2,
+      "id": 1
+    },
+    {
+      "name": "test",
+      "phone": "1231321",
+      "address": "test address",
+      "userId": 7,
+      "id": 2
+    },
+    {
+      "name": "resedfd",
+      "phone": "12321",
+      "address": "ssjkgwjh",
+      "userId": 8,
+      "id": 3
+    }
+  ],
+  "categories": [
+    {
+      "name": "test",
+      "userId": 7,
+      "locationId": 2,
+      "id": 1
+    },
+    {
+      "name": "meat",
+      "userId": 8,
+      "locationId": 3,
+      "id": 2
+    }
+  ],
+  "items": [
+    {
+      "name": "testtu",
+      "price": "50.00",
+      "description": "testtttttt",
+      "qty": 2,
+      "userId": 7,
+      "locId": 2,
+      "catId": 1,
+      "id": 1
+    }
+  ]
+}
